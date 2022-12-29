@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xmlns:web="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd http://xmlns.jcp.org/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="5.0">
+  <display-name>PRJ321x_Asm2_vietcvfx12045</display-name>
+  <welcome-file-list>
+    <welcome-file>home.jsp</welcome-file>
+    <welcome-file>login.jsp</welcome-file>
+  </welcome-file-list>  
+
+  <context-param>
+    <param-name>username</param-name>
+    <param-value>vietcvfx12045@funix.edu.vn</param-value>
+  </context-param>
+  <context-param>
+    <param-name>password</param-name>
+    <param-value>123456789</param-value>
+  </context-param>  
+
+<!-- Số phút muốn tự động hủy session,thời gian mặc định của mỗi phiên làm việc session với ứng dụng java web trong khoảng tầm 30 phút. -->
+  	<session-config>
+        <session-timeout> -1 </session-timeout>
+	</session-config>
+  
+  <servlet>
+    <servlet-name>LogoutController</servlet-name>
+    <servlet-class>controller.LogoutController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LogoutController</servlet-name>
+    <url-pattern>/LogoutController</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>LoginController</servlet-name>
+    <servlet-class>controller.LoginController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginController</servlet-name>
+    <url-pattern>/LoginController</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>URLController</servlet-name>
+    <servlet-class>controller.URLController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>URLController</servlet-name>
+    <url-pattern>/URLController</url-pattern>
+  </servlet-mapping>
+  
+	<resource-ref>
+	      <description>DB Connection</description>
+	      <res-ref-name>jdbc/ShoppingDB</res-ref-name>
+	      <res-type>javax.sql.DataSource</res-type>
+	      <res-auth>Container</res-auth>
+	</resource-ref>
+</web-app>

@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+}
+.containeradmin {
+	overflow: auto;	
+}
+.adminname {
+	float: left;
+}
+.adminleft {
+	float: left;
+	width: 20%;
+	background-color: #8080ff;
+	height: 900px;
+	text-align: center;	
+}
+
+.adminright {
+	float: right;
+	width:80%;
+	background-color: gray;
+	height: 900px;
+}
+
+.admintable {
+	width: 95%;
+	padding: 10px;
+	margin: auto;
+	text-align: center;
+	
+}
+
+.admintable,th, td {
+	border: 1px solid;
+	border-collapse: collapse;
+}
